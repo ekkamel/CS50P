@@ -4,7 +4,7 @@ comment
 """
 
 name = input("What is your name? ")
-print("hello, ", end="" )
+print("hello, ", end="")
 print(name)
 
 # Remove whitespace from string
@@ -23,15 +23,13 @@ print(f"hello, {name}")
 name = name.title()
 print(f"hello, {name}")
 
-# We can also chain the methods 
+# We can also chain the methods
 name = name.strip().title()
 print(f"hello, {name}")
 
-# you can also do this  
+# you can also do this
 # name = input("What is your name? ").strip().title()
 
 # split the name into first name and last name
 first, last = name.split(" ")
-print(f"First name: {first}, Last name: {last}" )
-
-
+print(f"First name: {first}, Last name: {last}")
