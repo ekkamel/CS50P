@@ -4,9 +4,10 @@ def main():
 
 
 def spuare(n):
-    # return n * n
+    return n * n
     # return n ** 2
-    return pow(n, 2)     ## These are all the same 
+    # return pow(n, 2)     ## These are all the same 
 
 
-main()
+if __name__ == "__main__":
+    main()
