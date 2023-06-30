@@ -1,9 +1,12 @@
+def main(): 
+    name = input("What is your name? ")
+    print(hello(name))
+
+
 def hello(to="world"):     # this makes world a default 
-
-    print("Hello,", to)
+    return f"hello, {to}"
     
-
-hello()        
-name = input("What is your name? ")
-hello(name)
+    
+if __name__ == "__main__":
+    main()
     
