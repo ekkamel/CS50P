@@ -3,10 +3,12 @@ import csv
 def main():
     #print_unsorted()
     #print_sorted()
-    create_dict()
-    lambda_function()
-    use_csv_module()
-    use_csv_dictreader()
+    #create_dict()
+    #lambda_function()
+    #use_csv_module()
+    #use_csv_dictreader()
+    #write_csv()
+    dict_write()
 
 def print_unsorted():    
     with open("students.csv") as file: 
@@ -90,6 +92,22 @@ def use_csv_dictreader():
         for student in sorted(students, key=lambda student: student["name"]): 
             print(f"{student['name']} lives in {student['home']}")     
 
+def write_csv(): 
+    name = input("What's your name? ")
+    home = input("What's your home? ")
+
+    with open("students4.csv", "a") as file: 
+        writer = csv.writer(file)
+        writer.writerow([name, home])
+
+
+def dict_write(): 
+    name = input("What's your name? ")
+    home = input("What's your home? ")
+
+    with open("students4.csv", "a") as file: 
+        writer = csv.DictWriter(file, fieldnames=["name", "home"])
+        writer.writerow({"name": name, "home": home})
 
 
 if __name__ == "__main__":
