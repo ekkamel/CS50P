@@ -102,8 +102,8 @@ def write_csv():
 
 
 def dict_write(): 
-    name = input("What's your name? ")
-    home = input("What's your home? ")
+    name = input("What's your name? ").strip()
+    home = input("What's your home? ").strip()
 
     with open("students4.csv", "a") as file: 
         writer = csv.DictWriter(file, fieldnames=["name", "home"])
