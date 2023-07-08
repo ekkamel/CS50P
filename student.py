@@ -9,7 +9,7 @@ def get_student():
     house = input("house: ")
     return (name, house)       # you can separate the two variables
                                # or combine them in brackets as a TUPLE
-    
+
 
 if __name__ == "__main__":
     main()
