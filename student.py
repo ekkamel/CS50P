@@ -1,10 +1,10 @@
 class Student:
-    def __init__(self, name, house, patronus):    ## adding variables to objects 
+    def __init__(self, name, house):    ## adding variables to objects 
         if not name: 
             raise ValueError("Missing name")        
         self.name = name 
         self.house = house
-        self.patronus = patronus
+        #self.patronus = patronus
         
     def __str__(self): 
         return f"{self.name} from {self.house}"
@@ -28,8 +28,18 @@ class Student:
             return "Pizza"
         elif self.patronus == 'Otter': 
             return 'another emoji'
-        
     
+    @classmethod    
+    def get(cls):     
+        name = input("name: ")
+        house = input("house: ")
+        patronus = input("patronus: ")
+        return cls(name, house)     ## here I passed the calss name as afunction 
+                                        ## This line is a constructor call
+                                        ## This line CONSTRUCTS a Student object for me 
+                                        ## another name is INSTANTIATION 
+                                    
+                                        ## This calls the __init__ fuction
         
 
 def main():    
@@ -40,24 +50,11 @@ def main():
     #    student[1] = "Ravenclaw"
     #print(f"{student[0]} from {student[1]}")
 
-    student = get_student_class()    
+    student = Student.get()    
     print("Expecto Patronum!")
     print(student.charm())
     
     
-def get_student_class():     
-    name = input("name: ")
-    house = input("house: ")
-    patronus = input("patronus: ")
-    return Student(name, house, patronus)     ## here I passed the calss name as afunction 
-                                        ## This line is a constructor call
-                                        ## This line CONSTRUCTS a Student object for me 
-                                        ## another name is INSTANTIATION 
-                                    
-                                        ## This calls the __init__ fuction
-     
-        
-        
 
 
 def get_student(): 
