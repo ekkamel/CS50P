@@ -1,4 +1,14 @@
-def meow(n: int): 
+def meow(n: int) -> str: 
+    """
+    Meow n times.
+
+    :param n: number of times to meow
+    :type n: int
+    :raise TypeError: if n is not int
+    :return: A string of n meows, one per line 
+    :rtype: str
+    """
+    
     for _ in range(n): 
         print("meow")
         
